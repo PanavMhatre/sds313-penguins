@@ -18,3 +18,17 @@ penguins |>
     avg_bill_length = mean(bill_length_mm, na.rm = TRUE)
   )
 ```
+
+## Penguin Bill Length Visualization
+
+```{r}
+penguins |>
+  ggplot(aes(x = species, y = bill_length_mm, fill = species)) +
+  geom_boxplot() +
+  labs(
+    title = "Penguin Bill Length by Species",
+    x = "Species",
+    y = "Bill Length (mm)"
+  ) +
+  theme_minimal()
+```
