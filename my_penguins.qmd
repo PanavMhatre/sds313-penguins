@@ -1,0 +1,20 @@
+---
+title: "Palmer Penguins Analysis"
+author: "Panav Mhatre"
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+## Average Bill Length by Species
+
+```{r}
+penguins |>
+  group_by(species) |>
+  summarize(
+    avg_bill_length = mean(bill_length_mm, na.rm = TRUE)
+  )
+```
